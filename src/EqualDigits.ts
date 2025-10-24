@@ -15,8 +15,8 @@ function getNewString(s: string): string {
         return s
     }
     for (let i: number = 0; i < s.length - 1; i++) {
-        num = (parseInt(s[i]) + parseInt(s[i + 1])) % 10
-        s2 = s2.concat(num.toString())
+        num = (Number(s[i]) + Number(s[i + 1])) % 10
+        s2 = s2.concat(String(num))
     }
     return s2;
 }
@@ -27,4 +27,4 @@ function hasSameDigits(s: string): boolean {
     return s[0] == s[1]
 };
 
-console.log(hasSameDigits("472389023"))
+console.log(hasSameDigits("83920203"))
